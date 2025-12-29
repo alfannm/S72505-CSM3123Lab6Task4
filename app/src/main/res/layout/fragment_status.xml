@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    Root layout for the Status fragment.
+    Displays real-time light sensor information
+    centered vertically on the screen.
+-->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -6,6 +12,9 @@
     android:orientation="vertical"
     android:padding="20dp">
 
+    <!--
+        Title text indicating the purpose of this screen.
+    -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -13,6 +22,10 @@
         android:textSize="22sp"
         android:gravity="center" />
 
+    <!--
+        Horizontal ProgressBar that visually represents
+        the current light intensity value.
+    -->
     <ProgressBar
         android:id="@+id/lightProgress"
         style="?android:attr/progressBarStyleHorizontal"
@@ -21,6 +34,10 @@
         android:max="300"
         android:layout_marginTop="20dp" />
 
+    <!--
+        TextView that displays the current light level
+        in lux, updated dynamically from sensor data.
+    -->
     <TextView
         android:id="@+id/tvLuxValue"
         android:layout_width="match_parent"
@@ -29,4 +46,5 @@
         android:textSize="18sp"
         android:gravity="center"
         android:layout_marginTop="10dp"/>
+
 </LinearLayout>

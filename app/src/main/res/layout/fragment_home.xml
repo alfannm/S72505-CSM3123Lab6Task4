@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    Root layout for the Home fragment.
+    LinearLayout is used to stack elements vertically
+    and center them on the screen.
+-->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -6,6 +12,10 @@
     android:gravity="center"
     android:padding="20dp">
 
+    <!--
+        Title text for the Home screen.
+        Indicates the current tab to the user.
+    -->
     <TextView
         android:id="@+id/tvHomeTitle"
         android:layout_width="wrap_content"
@@ -14,6 +24,10 @@
         android:textSize="22sp"
         android:layout_gravity="center" />
 
+    <!--
+        TextView that displays the saved username
+        retrieved from SharedPreferences.
+    -->
     <TextView
         android:id="@+id/tvHomeUser"
         android:layout_width="wrap_content"
@@ -23,6 +37,10 @@
         android:layout_gravity="center"
         android:layout_marginTop="10dp"/>
 
+    <!--
+        TextView that displays the currently selected theme
+        based on user settings.
+    -->
     <TextView
         android:id="@+id/tvHomeTheme"
         android:layout_width="wrap_content"
@@ -32,6 +50,10 @@
         android:layout_gravity="center"
         android:layout_marginTop="10dp"/>
 
+    <!--
+        TextView that displays the selected font size
+        stored in application preferences.
+    -->
     <TextView
         android:id="@+id/tvHomeFont"
         android:layout_width="wrap_content"

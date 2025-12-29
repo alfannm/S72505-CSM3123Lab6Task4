@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    Root layout that arranges the ViewPager and TabLayout vertically.
+    LinearLayout is used to stack content from top to bottom.
+-->
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -6,12 +11,20 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+    <!--
+        ViewPager2 that hosts and displays different fragments.
+        It takes up most of the screen space above the tabs.
+    -->
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/viewPager"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1" />
 
+    <!--
+        TabLayout that provides tab navigation for the ViewPager2.
+        Each tab represents a fragment page.
+    -->
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabLayout"
         android:layout_width="match_parent"

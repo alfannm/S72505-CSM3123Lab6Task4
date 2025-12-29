@@ -1,26 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    Root ScrollView to allow vertical scrolling
+    when the content exceeds the screen height.
+-->
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <!--
+        Container layout that holds all settings form elements
+        arranged vertically.
+    -->
     <LinearLayout
         android:orientation="vertical"
         android:padding="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+        <!--
+            Input field for the user to enter or update their username.
+        -->
         <EditText
             android:id="@+id/etUsername"
             android:hint="Username"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
+        <!--
+            Spinner that allows the user to select a theme option.
+        -->
         <Spinner
             android:id="@+id/spTheme"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"/>
 
+        <!--
+            Label that displays the current font size value
+            selected using the SeekBar.
+        -->
         <TextView
             android:id="@+id/tvFontLabel"
             android:text="Font Size: 18"
@@ -28,6 +47,9 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"/>
 
+        <!--
+            SeekBar that allows the user to adjust the font size setting.
+        -->
         <SeekBar
             android:id="@+id/seekFont"
             android:max="30"
@@ -35,6 +57,10 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"/>
 
+        <!--
+            Button used to save all selected settings
+            into SharedPreferences.
+        -->
         <Button
             android:id="@+id/btnSave"
             android:text="Save Settings"
